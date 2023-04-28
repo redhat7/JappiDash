@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="assets/css/Styles.css">
+     
+    <!----===== Iconscout CSS ===== -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+
+    <!----======== FAVICON======== -->
+    <link rel="icon" type="image/png" href="assets/img/favicon.png">
+
+    
+    <title>JapiExpress</title> 
+
+</head>
+<body>
+    <nav>
+        <div class="logo-name">
+            <div class="logo-image">
+                <img src="assets/img/logo.png" alt="">
+            </div>
+
+            <span class="logo_name">Japi Express</span>
+        </div>
+
+        <div class="menu-items"> 
+            <ul class="nav-links">
+                <li><a href="index.html"class="active">
+                    <i class="uil uil-calendar-alt"></i>
+                    <span class="link-name">ENVIOS POR FECHA</span>
+                </a></li>
+                <li><a href="envios-dia.html">
+                    <i class="uil uil-calender"></i>
+                    <span class="link-name">ENVIOS POR DÍA</span>
+                </a></li>
+                <li><a href="administrar-recojos.html">
+                    <i class="uil uil-truck"></i>
+                    <span class="link-name">ADMINISTRAR RECOJOS</span>
+                </a></li>
+                <li><a href="historial-recojos.html">
+                    <i class="uil uil-shopping-cart-alt"></i>
+                    <span class="link-name">HISTORIAL RECOJOS</span>
+                </a></li>
+                <li><a href="almacen-japi.html">
+                    <i class="uil uil-store"></i>
+                    <span class="link-name">ALMACEN JAPI</span>
+                </a></li>
+                <li><a href="solicitud-almacen.html">
+                    <i class="uil uil-store-alt"></i>
+                    <span class="link-name">SOLICITUD DE ALMACEN</span>
+                </a></li>
+                <li><a href="administrar-almacen.html">
+                    <i class="uil uil-shop"></i>
+                    <span class="link-name">ADMINISTRAR ALMACEN</span>
+                </a></li>
+                <li><a href="administrar-entregas.html">
+                    <i class="uil uil-shopping-bag"></i>
+                    <span class="link-name">ADMINISTRAR ENTREGAS</span>
+                </a></li>               
+                <li><a href="registro.motorizado.html">
+                    <i class="uil uil-user-plus"></i>
+                    <span class="link-name">REGISTRO MOTORIZADO</span>
+                </a></li>
+                <li><a href="activacion-cuentas.html">
+                    <i class="uil uil-check-circle"></i>
+                    <span class="link-name">ACTIVACIÓN DE CUENTAS</span>
+                </a></li>
+                <li><a href="lista-colaboradores.html">
+                    <i class="uil uil-clipboard-notes"></i>
+                    <span class="link-name">LISTA DE COLABORADORES</span>
+                </a></li>
+                <li><a href="lista-administradores.html">
+                    <i class="uil uil-shield-check"></i>
+                    <span class="link-name">LISTA DE ADMINISTRADORES</span>
+                </a></li>
+                <li><a href="usuarios-externos.html">
+                    <i class="uil uil-user-exclamation"></i>
+                    <span class="link-name">USUARIOS EXTERNOS</span>
+                </a></li>
+            </ul>
+            
+            <ul class="logout-mode">
+                <li><a href="#">
+                    <i class="uil uil-signout"></i>
+                    <span class="link-name">CERRAR CESIÓN</span>
+                </a></li>
+
+                <li class="mode">
+                    <a href="#">
+                        <i class="uil uil-moon"></i>
+                    <span class="link-name">MODO OSCURO</span>
+                </a>
+
+                <div class="mode-toggle">
+                  <span class="switch"></span>
+                </div>
+            </li>
+            </ul>
+        </div>
+    </nav>
+    
+
+    <section class="dashboard">
+        <div class="top">
+            <i class="uil uil-bars sidebar-toggle"></i>
+
+            <div class="search-box">
+                <i class="uil uil-search"></i>
+                <input type="text" placeholder="Buscar">
+            </div>
+            
+            <img src="assets/img/foto1.jpg" alt="">
+        </div>
+
+        <div class="dash-content">
+            <div class="overview">
+                <div>
+                    <div class="text">
+                        <span class="text"><h2>Buscar por fecha</h2></span>
+                         <div class="text-search">
+
+                            <div class="space">
+                                <span class="text"> <h3>FECHA DE CONSULTA</h3></span>
+
+                                <div class="date"> 
+                                    <h4>DESDE</h4>
+                                    <input type="date">
+                                </div>
+
+                                <div class="date">
+                                    <h4>HASTA</h4>
+                                    <input type="date">
+                                </div>
+                            </div>
+
+                            <div class="space">   
+                                <span class="text"><h3> ELIGE UN CAMPO </h3> </span>
+                                <form id="form" action="post" class="form">
+                                    <select class="list" name="select1" id="">
+                                        <option  value="disabled selected">Elige un campo</option>
+                                        <option value="ejemplo1">Descripción del producto</option>
+                                        <option value="ejemplo2">Distrito</option>
+                                        <option value="ejemplo3">Estado</option>
+                                        <option value="ejemplo4">Modo de entrega</option>
+                                        <option value="ejemplo5">Nombre del comprador</option>
+                                        <option value="ejemplo5">Nombre del motorizado</option>
+                                        <option value="ejemplo5">Teléfono del comprador</option>
+                                    </select>
+                                </form>
+                            </div> 
+                            
+                            <div>
+                                <span class="text"> <h3>FILTRAR </h3>
+                                    <div class="search-box2">
+                                        <input type="text" placeholder="Buscar...">
+                                    </div>
+                                </span>
+                            </div>   
+                            <div class="right-button">
+                                <a href="#" class="button-search">
+                                    Consultar
+                                </a> 
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="tabla-container">
+                
+                <span class="text"><h2>Envios por fecha</h2></span>
+                
+                    <table class="tabla__content">
+                        <thead >
+                            <tr >
+                                <th class="separacion">
+                                    N°
+                                </th>
+                                <th class="separacion">
+                                    Vendedor
+                                </th>
+                                <th class="separacion">
+                                    Producto
+                                </th>
+                                <th class="separacion">
+                                    Cantidad
+                                </th>
+                                <th class="separacion">
+                                    Comprador
+                                </th>
+                                <th class="separacion">
+                                    Monto total
+                                </th>
+                                <th class="separacion">
+                                    Metodo de pago
+                                </th>
+
+                                <th class="separacion">
+                                    Modo de entrega
+                                </th>
+
+                                <th class="separacion">
+                                    Estado
+                                </th>
+                                <th class="separacion">
+                                    Opciones
+                                </th>
+                                <th class="separacion">
+                                    Detalle
+                                </th>
+                            </tr>
+
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td data-label=" N°">
+                                    1
+                                </td>
+                                <td data-label="Vendedor">
+                                    Pedro Arroyo
+                                </td >
+                                <td data-label="Producto">
+                                    Ropa
+                                </td>
+                                <td data-label="Cantidad">
+                                    1
+                                </td>
+                                <td data-label="Comprador">
+                                    Ana Chunque
+                                </td>
+                                <td data-label="Monto total">
+                                    s/.15.00
+                                </td>
+                                <td data-label="Metodo de pago">
+                                    no tiene
+                                </td>
+                                <td data-label="Modo de entrega">
+                                    contra entrega
+                                </td>
+                                <td data-label="Estado">
+                                    entregado
+                                </td>
+                                <td data-label="Opciones" class="td-button">
+                                    <a href="#" class="button-index-green">
+                                        Editar 
+                                    </a> 
+                                    <a href="#" class="button-index-red">
+                                        Eliminar 
+                                    </a> 
+                                </td>
+                                <td data-label="Detalle">
+                                    <a href="#" class="button-detail detail__button" id="open-modal">
+                                        <i class="uil uil-edit"></i>
+                                    </a> 
+                                    <div class="detail__modal">
+                                        <div class="detail__modal-content detail__modal--bd">
+                                            <h3 class="detail__modal-title">DETALLE POR FECHA</h3>
+                                            <i class="uil uil-times detail__modal-close"></i>
+
+                                            <div class="division-grid">
+                                                <div>
+                                                    <h3 class="detail__title">datos generales</h3>
+                                                    <div class="space__h4 date-grid">
+                                                        <h4>N° Producto</h4> <h4>1</h4>
+                                                        <h4>Vendedor</h4> <h4>Juan monje</h4>
+                                                        <h4>Producto</h4> <h4>Gaseosa</h4>
+                                                        <h4>Cantidad</h4> <h4>2</h4>
+                                                        <h4>Fecha de entrega</h4> <h4>26</h4>
+                                                        <h4>Monto a cobrar</h4> <h4>4</h4>
+                                                        <h4>Método de pago</h4> <h4>Efectivo</h4>
+                                                        <h4>Estado</h4> <h4>Entregado</h4>
+                                                    </div>
+                                                </div>
+                                         
+                                                <div>
+                                                    <h3 class="detail__title">Datos del cliente</h3>
+                                                    <div class="space__h4 date-grid">
+                                                        <h4>Comprador</h4><h4>Mario Hart</h4>
+                                                        <h4>Distrito</h4><h4>Ate</h4>
+                                                        <h4>Dirección de entrega</h4><h4>Calle las gencianas 150</h4>
+                                                        <h4>Telefono comprador</h4><h4>987 656 678</h4>
+                                                    </div>
+                                                </div>
+                                   
+                                                <div>
+                                                    <h3 class="detail__title">Datos de envio</h3>
+                                                    <div class="space__h4 date-grid">
+                                                        <h4>Delivery</h4> <h4>s/.5.00</h4>
+                                                        <h4>Motivo</h4> <h4>No tiene</h4>
+                                                        <h4>Motorizado</h4> <h4>Pedro Muñoz</h4>
+                                                        <h4>Modificación</h4> <h4>No tiene</h4>
+                                                    </div>
+                                                </div>
+
+                                                <div>
+                                                    <h3 class="detail__title">Datos adicionales</h3>
+                                                    <div class="space__h4 date-grid">
+                                                        <h4>Modo de entrega</h4><h4>Contra-entrega</h4>
+                                                        <h4>Servicio</h4><h4>Regular</h4>
+                                                        <h4>Rango de horario</h4><h4>9:00am -6:00pm</h4>
+                                                        <h4>Observaciones</h4>
+                                                        <h4>Pagará con tarjeta</h4>
+                                                    </div>
+                                                </div>
+                                                
+                                            </div>
+                                        </div>                                       
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td data-label=" N°">
+                                    2
+                                </td>
+                                <td data-label="Vendedor">
+                                    Pedro Arroyo
+                                </td >
+                                <td data-label="Producto">
+                                    Ropa
+                                </td>
+                                <td data-label="Cantidad">
+                                    1
+                                </td>
+                                <td data-label="Comprador">
+                                    Ana Chunque
+                                </td>
+                                <td data-label="Monto total">
+                                    s/.15.00
+                                </td>
+                                <td data-label="Metodo de pago">
+                                    no tiene
+                                </td>
+                                <td data-label="Modo de entrega">
+                                    contra entrega
+                                </td>
+                                <td data-label="Estado">
+                                    entregado
+                                </td>
+                                <td data-label="Opciones" class="td-button">
+                                    <a href="#" class="button-index-green">
+                                        Editar 
+                                    </a> 
+                                    <a href="#" class="button-index-red">
+                                        Eliminar 
+                                    </a> 
+                                </td>
+                                <td data-label="Detalle">
+                                    <a href="#" class="button-detail detail__button" id="open-modal">
+                                        <i class="uil uil-edit"></i>
+                                    </a> 
+                                    <div class="detail__modal">
+                                        <div class="detail__modal-content detail__modal--bd">
+                                            <h3 class="detail__modal-title">DETALLE POR FECHA</h3>
+                                            <i class="uil uil-times detail__modal-close"></i>
+
+                                            <div class="division-grid">
+                                                <div>
+                                                    <h3 class="detail__title">datos generales</h3>
+                                                    <div class="space__h4 date-grid">
+                                                        <h4>N° Producto</h4> <h4>1</h4>
+                                                        <h4>Vendedor</h4> <h4>Juan monje</h4>
+                                                        <h4>Producto</h4> <h4>Gaseosa</h4>
+                                                        <h4>Cantidad</h4> <h4>2</h4>
+                                                        <h4>Fecha de entrega</h4> <h4>26</h4>
+                                                        <h4>Monto a cobrar</h4> <h4>4</h4>
+                                                        <h4>Método de pago</h4> <h4>Efectivo</h4>
+                                                        <h4>Estado</h4> <h4>Entregado</h4>
+                                                    </div>
+                                                </div>
+                                         
+                                                <div>
+                                                    <h3 class="detail__title">Datos del cliente</h3>
+                                                    <div class="space__h4 date-grid">
+                                                        <h4>Comprador</h4><h4>Mario Hart</h4>
+                                                        <h4>Distrito</h4><h4>Ate</h4>
+                                                        <h4>Dirección de entrega</h4><h4>Calle las gencianas 150</h4>
+                                                        <h4>Telefono comprador</h4><h4>987 656 678</h4>
+                                                    </div>
+                                                </div>
+                                   
+                                                <div>
+                                                    <h3 class="detail__title">Datos de envio</h3>
+                                                    <div class="space__h4 date-grid">
+                                                        <h4>Delivery</h4> <h4>s/.5.00</h4>
+                                                        <h4>Motivo</h4> <h4>No tiene</h4>
+                                                        <h4>Motorizado</h4> <h4>Pedro Muñoz</h4>
+                                                        <h4>Modificación</h4> <h4>No tiene</h4>
+                                                    </div>
+                                                </div>
+
+                                                <div>
+                                                    <h3 class="detail__title">Datos adicionales</h3>
+                                                    <div class="space__h4 date-grid">
+                                                        <h4>Modo de entrega</h4><h4>Contra-entrega</h4>
+                                                        <h4>Servicio</h4><h4>Regular</h4>
+                                                        <h4>Rango de horario</h4><h4>9:00am -6:00pm</h4>
+                                                        <h4>Observaciones</h4>
+                                                        <h4>Pagará con tarjeta</h4>
+                                                    </div>
+                                                </div>
+                                                
+                                            </div>
+                                        </div>                                       
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td data-label=" N°">
+                                    3
+                                </td>
+                                <td data-label="Vendedor">
+                                    Pedro Arroyo
+                                </td >
+                                <td data-label="Producto">
+                                    Ropa
+                                </td>
+                                <td data-label="Cantidad">
+                                    1
+                                </td>
+                                <td data-label="Comprador">
+                                    Ana Chunque
+                                </td>
+                                <td data-label="Monto total">
+                                    s/.15.00
+                                </td>
+                                <td data-label="Metodo de pago">
+                                    no tiene
+                                </td>
+                                <td data-label="Modo de entrega">
+                                    contra entrega
+                                </td>
+                                <td data-label="Estado">
+                                    entregado
+                                </td>
+                                <td data-label="Opciones" class="td-button">
+                                    <a href="#" class="button-index-green">
+                                        Editar 
+                                    </a> 
+                                    <a href="#" class="button-index-red">
+                                        Eliminar 
+                                    </a> 
+                                </td>
+                                <td data-label="Detalle">
+                                    <a href="#" class="button-detail detail__button" id="open-modal">
+                                        <i class="uil uil-edit"></i>
+                                    </a> 
+                                    <div class="detail__modal">
+                                        <div class="detail__modal-content detail__modal--bd">
+                                            <h3 class="detail__modal-title">DETALLE POR FECHA</h3>
+                                            <i class="uil uil-times detail__modal-close"></i>
+
+                                            <div class="division-grid">
+                                                <div>
+                                                    <h3 class="detail__title">datos generales</h3>
+                                                    <div class="space__h4 date-grid">
+                                                        <h4>N° Producto</h4> <h4>1</h4>
+                                                        <h4>Vendedor</h4> <h4>Juan monje</h4>
+                                                        <h4>Producto</h4> <h4>Gaseosa</h4>
+                                                        <h4>Cantidad</h4> <h4>2</h4>
+                                                        <h4>Fecha de entrega</h4> <h4>26</h4>
+                                                        <h4>Monto a cobrar</h4> <h4>4</h4>
+                                                        <h4>Método de pago</h4> <h4>Efectivo</h4>
+                                                        <h4>Estado</h4> <h4>Entregado</h4>
+                                                    </div>
+                                                </div>
+                                         
+                                                <div>
+                                                    <h3 class="detail__title">Datos del cliente</h3>
+                                                    <div class="space__h4 date-grid">
+                                                        <h4>Comprador</h4><h4>Mario Hart</h4>
+                                                        <h4>Distrito</h4><h4>Ate</h4>
+                                                        <h4>Dirección de entrega</h4><h4>Calle las gencianas 150</h4>
+                                                        <h4>Telefono comprador</h4><h4>987 656 678</h4>
+                                                    </div>
+                                                </div>
+                                   
+                                                <div>
+                                                    <h3 class="detail__title">Datos de envio</h3>
+                                                    <div class="space__h4 date-grid">
+                                                        <h4>Delivery</h4> <h4>s/.5.00</h4>
+                                                        <h4>Motivo</h4> <h4>No tiene</h4>
+                                                        <h4>Motorizado</h4> <h4>Pedro Muñoz</h4>
+                                                        <h4>Modificación</h4> <h4>No tiene</h4>
+                                                    </div>
+                                                </div>
+
+                                                <div>
+                                                    <h3 class="detail__title">Datos adicionales</h3>
+                                                    <div class="space__h4 date-grid">
+                                                        <h4>Modo de entrega</h4><h4>Contra-entrega</h4>
+                                                        <h4>Servicio</h4><h4>Regular</h4>
+                                                        <h4>Rango de horario</h4><h4>9:00am -6:00pm</h4>
+                                                        <h4>Observaciones</h4>
+                                                        <h4>Pagará con tarjeta</h4>
+                                                    </div>
+                                                </div>
+                                                
+                                            </div>
+                                        </div>                                       
+                                    </div>
+                                </td>
+                                    
+                            </tr>
+
+                            <tr>
+                                <td data-label=" N°">
+                                    4
+                                </td>
+                                <td data-label="Vendedor">
+                                    Pedro Arroyo
+                                </td >
+                                <td data-label="Producto">
+                                    Ropa
+                                </td>
+                                <td data-label="Cantidad">
+                                    1
+                                </td>
+                                <td data-label="Comprador">
+                                    Ana Chunque
+                                </td>
+                                <td data-label="Monto total">
+                                    s/.15.00
+                                </td>
+                                <td data-label="Metodo de pago">
+                                    no tiene
+                                </td>
+                                <td data-label="Modo de entrega">
+                                    contra entrega
+                                </td>
+                                <td data-label="Estado">
+                                    pendiente
+                                </td>
+                                <td data-label="Opciones" class="td-button">
+                                    <a href="#" class="button-index-green">
+                                        Editar 
+                                    </a> 
+                                    <a href="#" class="button-index-red">
+                                        Eliminar 
+                                    </a> 
+                                </td>
+                                <td data-label="Detalle">
+                                    <a href="#" class="button-detail detail__button" id="open-modal">
+                                        <i class="uil uil-edit"></i>
+                                    </a> 
+                                    <div class="detail__modal">
+                                        <div class="detail__modal-content detail__modal--bd">
+                                            <h3 class="detail__modal-title">DETALLE POR FECHA</h3>
+                                            <i class="uil uil-times detail__modal-close"></i>
+
+                                            <div class="division-grid">
+                                                <div>
+                                                    <h3 class="detail__title">datos generales</h3>
+                                                    <div class="space__h4 date-grid">
+                                                        <h4>N° Producto</h4> <h4>1</h4>
+                                                        <h4>Vendedor</h4> <h4>Juan monje</h4>
+                                                        <h4>Producto</h4> <h4>Gaseosa</h4>
+                                                        <h4>Cantidad</h4> <h4>2</h4>
+                                                        <h4>Fecha de entrega</h4> <h4>26</h4>
+                                                        <h4>Monto a cobrar</h4> <h4>4</h4>
+                                                        <h4>Método de pago</h4> <h4>Efectivo</h4>
+                                                        <h4>Estado</h4> <h4>Entregado</h4>
+                                                    </div>
+                                                </div>
+                                         
+                                                <div>
+                                                    <h3 class="detail__title">Datos del cliente</h3>
+                                                    <div class="space__h4 date-grid">
+                                                        <h4>Comprador</h4><h4>Mario Hart</h4>
+                                                        <h4>Distrito</h4><h4>Ate</h4>
+                                                        <h4>Dirección de entrega</h4><h4>Calle las gencianas 150</h4>
+                                                        <h4>Telefono comprador</h4><h4>987 656 678</h4>
+                                                    </div>
+                                                </div>
+                                   
+                                                <div>
+                                                    <h3 class="detail__title">Datos de envio</h3>
+                                                    <div class="space__h4 date-grid">
+                                                        <h4>Delivery</h4> <h4>s/.5.00</h4>
+                                                        <h4>Motivo</h4> <h4>No tiene</h4>
+                                                        <h4>Motorizado</h4> <h4>Pedro Muñoz</h4>
+                                                        <h4>Modificación</h4> <h4>No tiene</h4>
+                                                    </div>
+                                                </div>
+
+                                                <div>
+                                                    <h3 class="detail__title">Datos adicionales</h3>
+                                                    <div class="space__h4 date-grid">
+                                                        <h4>Modo de entrega</h4><h4>Contra-entrega</h4>
+                                                        <h4>Servicio</h4><h4>Regular</h4>
+                                                        <h4>Rango de horario</h4><h4>9:00am -6:00pm</h4>
+                                                        <h4>Observaciones</h4>
+                                                        <h4>Pagará con tarjeta</h4>
+                                                    </div>
+                                                </div>
+                                                
+                                            </div>
+                                        </div>                                       
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td data-label=" N°">
+                                    5
+                                </td>
+                                <td data-label="Vendedor">
+                                    Pedro Arroyo
+                                </td >
+                                <td data-label="Producto">
+                                    Ropa
+                                </td>
+                                <td data-label="Cantidad">
+                                    1
+                                </td>
+                                <td data-label="Comprador">
+                                    Ana Chunque
+                                </td>
+                                <td data-label="Monto total">
+                                    s/.15.00
+                                </td>
+                                <td data-label="Metodo de pago">
+                                    no tiene
+                                </td>
+                                <td data-label="Modo de entrega">
+                                    contra entrega
+                                </td>
+                                <td data-label="Estado">
+                                    pendiente
+                                </td>
+                                <td data-label="Opciones" class="td-button">
+                                    <a href="#" class="button-index-green">
+                                        Editar 
+                                    </a> 
+                                    <a href="#" class="button-index-red">
+                                        Eliminar 
+                                    </a> 
+                                </td>
+                                <td data-label="Detalle">
+                                    <a href="#" class="button-detail detail__button" id="open-modal">
+                                        <i class="uil uil-edit"></i>
+                                    </a> 
+                                    <div class="detail__modal">
+                                        <div class="detail__modal-content detail__modal--bd">
+                                            <h3 class="detail__modal-title">DETALLE POR FECHA</h3>
+                                            <i class="uil uil-times detail__modal-close"></i>
+
+                                            <div class="division-grid">
+                                                <div>
+                                                    <h3 class="detail__title">datos generales</h3>
+                                                    <div class="space__h4 date-grid">
+                                                        <h4>N° Producto</h4> <h4>1</h4>
+                                                        <h4>Vendedor</h4> <h4>Juan monje</h4>
+                                                        <h4>Producto</h4> <h4>Gaseosa</h4>
+                                                        <h4>Cantidad</h4> <h4>2</h4>
+                                                        <h4>Fecha de entrega</h4> <h4>26</h4>
+                                                        <h4>Monto a cobrar</h4> <h4>4</h4>
+                                                        <h4>Método de pago</h4> <h4>Efectivo</h4>
+                                                        <h4>Estado</h4> <h4>Entregado</h4>
+                                                    </div>
+                                                </div>
+                                         
+                                                <div>
+                                                    <h3 class="detail__title">Datos del cliente</h3>
+                                                    <div class="space__h4 date-grid">
+                                                        <h4>Comprador</h4><h4>Mario Hart</h4>
+                                                        <h4>Distrito</h4><h4>Ate</h4>
+                                                        <h4>Dirección de entrega</h4><h4>Calle las gencianas 150</h4>
+                                                        <h4>Telefono comprador</h4><h4>987 656 678</h4>
+                                                    </div>
+                                                </div>
+                                   
+                                                <div>
+                                                    <h3 class="detail__title">Datos de envio</h3>
+                                                    <div class="space__h4 date-grid">
+                                                        <h4>Delivery</h4> <h4>s/.5.00</h4>
+                                                        <h4>Motivo</h4> <h4>No tiene</h4>
+                                                        <h4>Motorizado</h4> <h4>Pedro Muñoz</h4>
+                                                        <h4>Modificación</h4> <h4>No tiene</h4>
+                                                    </div>
+                                                </div>
+
+                                                <div>
+                                                    <h3 class="detail__title">Datos adicionales</h3>
+                                                    <div class="space__h4 date-grid">
+                                                        <h4>Modo de entrega</h4><h4>Contra-entrega</h4>
+                                                        <h4>Servicio</h4><h4>Regular</h4>
+                                                        <h4>Rango de horario</h4><h4>9:00am -6:00pm</h4>
+                                                        <h4>Observaciones</h4>
+                                                        <h4>Pagará con tarjeta</h4>
+                                                    </div>
+                                                </div>
+                                                
+                                            </div>
+                                        </div>                                       
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td data-label=" N°">
+                                    6
+                                </td>
+                                <td data-label="Vendedor">
+                                    Pedro Arroyo
+                                </td >
+                                <td data-label="Producto">
+                                    Ropa
+                                </td>
+                                <td data-label="Cantidad">
+                                    1
+                                </td>
+                                <td data-label="Comprador">
+                                    Ana Chunque
+                                </td>
+                                <td data-label="Monto total">
+                                    s/.15.00
+                                </td>
+                                <td data-label="Metodo de pago">
+                                    no tiene
+                                </td>
+                                <td data-label="Modo de entrega">
+                                    contra entrega
+                                </td>
+                                <td td data-label="Estado">
+                                    pendiente
+                                </td>
+                                <td data-label="Opciones" class="td-button">
+                                    <a href="#" class="button-index-green">
+                                        Editar 
+                                    </a> 
+                                    <a href="#" class="button-index-red">
+                                        Eliminar 
+                                    </a>  
+                                </td>
+                                <td data-label="Detalle">
+                                    <a href="#" class="button-detail detail__button" id="open-modal">
+                                        <i class="uil uil-edit"></i>
+                                    </a> 
+                                    <div class="detail__modal">
+                                        <div class="detail__modal-content detail__modal--bd">
+                                            <h3 class="detail__modal-title">DETALLE POR FECHA</h3>
+                                            <i class="uil uil-times detail__modal-close"></i>
+
+                                            <div class="division-grid ">
+                                                <div class="accordion__item">
+                                                    <h3 class="detail__title accordion__header"><i class="uil uil-plus accordion__icon"></i>Datos generales</h3>
+                                                    <div class="space__h4 date-grid accordion__content">
+                                                            <h4>N° Producto</h4> <h4>1</h4>
+                                                            <h4>Vendedor</h4> <h4>Juan monje</h4>
+                                                            <h4>Producto</h4> <h4>Gaseosa</h4>
+                                                            <h4>Cantidad</h4> <h4>2</h4>
+                                                            <h4>Fecha de entrega</h4> <h4>26</h4>
+                                                            <h4>Monto a cobrar</h4> <h4>4</h4>
+                                                            <h4>Método de pago</h4> <h4>Efectivo</h4>
+                                                            <h4>Estado</h4> <h4>Entregado</h4>
+                                                        
+                                                    </div>
+                                                </div>
+                                         
+                                                <div class="accordion__item">
+                                                    <h3 class="detail__title accordion__header"><i class="uil uil-plus accordion__icon"></i>Datos del cliente</h3>
+                                                    <div class="space__h4 date-grid accordion__content">
+                                                        <h4>Comprador</h4><h4>Mario Hart</h4>
+                                                        <h4>Distrito</h4><h4>Ate</h4>
+                                                        <h4>Dirección de entrega</h4><h4>Calle las gencianas 150</h4>
+                                                        <h4>Telefono comprador</h4><h4>987 656 678</h4>
+                                                    </div>
+                                                </div>
+                                   
+                                                <div class="accordion__item">
+                                                    <h3 class="detail__title accordion__header"><i class="uil uil-plus accordion__icon"></i>Datos de envio</h3>
+                                                    <div class="space__h4 date-grid accordion__content">
+                                                        <h4>Delivery</h4> <h4>s/.5.00</h4>
+                                                        <h4>Motivo</h4> <h4>No tiene</h4>
+                                                        <h4>Motorizado</h4> <h4>Pedro Muñoz</h4>
+                                                        <h4>Modificación</h4> <h4>No tiene</h4>
+                                                    </div>
+                                                </div>
+
+                                                <div class="accordion__item">
+                                                    <h3 class="detail__title accordion__header"><i class="uil uil-plus accordion__icon"></i>Datos adicionales</h3>
+                                                    <div class="space__h4 date-grid accordion__content">
+                                                        <h4>Modo de entrega</h4><h4>Contra-entrega</h4>
+                                                        <h4>Servicio</h4><h4>Regular</h4>
+                                                        <h4>Rango de horario</h4><h4>9:00am -6:00pm</h4>
+                                                        <h4>Observaciones</h4>
+                                                        <h4>Pagará con tarjeta</h4>
+                                                    </div>
+                                                </div>
+                                                
+                                            </div>
+                                        </div>                                       
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td data-label=" N°">
+                                    7
+                                </td>
+                                <td data-label="Vendedor">
+                                    Pedro Arroyo
+                                </td >
+                                <td data-label="Producto">
+                                    Ropa
+                                </td>
+                                <td data-label="Cantidad">
+                                    1
+                                </td>
+                                <td data-label="Comprador">
+                                    Ana Chunque
+                                </td>
+                                <td data-label="Monto total">
+                                    s/.15.00
+                                </td>
+                                <td data-label="Metodo de pago">
+                                    no tiene
+                                </td>
+                                <td data-label="Modo de entrega">
+                                    contra entrega
+                                </td>
+                                <td data-label="Estado">
+                                    pendiente
+                                </td>
+                                <td data-label="Opciones" class="td-button">                                  
+                                    <a href="#" class="button-index-green">
+                                        Editar 
+                                    </a> 
+                                    <a href="#" class="button-index-red">
+                                        Eliminar 
+                                    </a> 
+                                </td>
+                                <td data-label="Detalle">
+                                    <a href="#" class="button-detail">
+                                     <i class="uil uil-edit"></i>
+                                  </a> 
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+            </div>
+        </div>
+    </section>
+
+    <script src="assets/js/index.js"></script>
+</body>
+</html>

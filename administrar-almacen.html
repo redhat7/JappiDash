@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="assets/css/Styles.css">
+     
+    <!----===== Iconscout CSS ===== -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+
+    <!----======== FAVICON======== -->
+    <link rel="icon" type="image/png" href="assets/img/favicon.png">
+
+    
+    <title>JapiExpress</title> 
+
+</head>
+<body>
+    <nav>
+        <div class="logo-name">
+            <div class="logo-image">
+                <img src="assets/img/logo.png" alt="">
+            </div>
+
+            <span class="logo_name">Japi Express</span>
+        </div>
+
+        <div class="menu-items"> 
+            <ul class="nav-links">
+                <li><a href="index.html">
+                    <i class="uil uil-calendar-alt"></i>
+                    <span class="link-name">ENVIOS POR FECHA</span>
+                </a></li>
+                <li><a href="envios-dia.html">
+                    <i class="uil uil-calender"></i>
+                    <span class="link-name">ENVIOS POR DÍA</span>
+                </a></li>
+                <li><a href="administrar-recojos.html">
+                    <i class="uil uil-truck"></i>
+                    <span class="link-name">ADMINISTRAR RECOJOS</span>
+                </a></li>
+                <li><a href="historial-recojos.html">
+                    <i class="uil uil-shopping-cart-alt"></i>
+                    <span class="link-name">HISTORIAL RECOJOS</span>
+                </a></li>
+                <li><a href="almacen-japi.html">
+                    <i class="uil uil-store"></i>
+                    <span class="link-name">ALMACEN JAPI</span>
+                </a></li>
+                <li><a href="solicitud-almacen.html">
+                    <i class="uil uil-store-alt"></i>
+                    <span class="link-name">SOLICITUD DE ALMACEN</span>
+                </a></li>
+                <li><a href="administrar-almacen.html"class="active">
+                    <i class="uil uil-shop"></i>
+                    <span class="link-name">ADMINISTRAR ALMACEN</span>
+                </a></li>
+                <li><a href="administrar-entregas.html">
+                    <i class="uil uil-shopping-bag"></i>
+                    <span class="link-name">ADMINISTRAR ENTREGAS</span>
+                </a></li>               
+                <li><a href="registro.motorizado.html">
+                    <i class="uil uil-user-plus"></i>
+                    <span class="link-name">REGISTRO MOTORIZADO</span>
+                </a></li>
+                <li><a href="activacion-cuentas.html">
+                    <i class="uil uil-check-circle"></i>
+                    <span class="link-name">ACTIVACIÓN DE CUENTAS</span>
+                </a></li>
+                <li><a href="lista-colaboradores.html">
+                    <i class="uil uil-clipboard-notes"></i>
+                    <span class="link-name">LISTA DE COLABORADORES</span>
+                </a></li>
+                <li><a href="lista-administradores.html">
+                    <i class="uil uil-shield-check"></i>
+                    <span class="link-name">LISTA DE ADMINISTRADORES</span>
+                </a></li>
+                <li><a href="usuarios-externos.html">
+                    <i class="uil uil-user-exclamation"></i>
+                    <span class="link-name">USUARIOS EXTERNOS</span>
+                </a></li>
+            </ul>
+            
+            <ul class="logout-mode">
+                <li><a href="#">
+                    <i class="uil uil-signout"></i>
+                    <span class="link-name">CERRAR CESIÓN</span>
+                </a></li>
+
+                <li class="mode">
+                    <a href="#">
+                        <i class="uil uil-moon"></i>
+                    <span class="link-name">MODO OSCURO</span>
+                </a>
+
+                <div class="mode-toggle">
+                  <span class="switch"></span>
+                </div>
+            </li>
+            </ul>
+        </div>
+    </nav>
+    
+
+    <section class="dashboard">
+        <div class="top">
+            <i class="uil uil-bars sidebar-toggle"></i>
+
+            <div class="search-box">
+                <i class="uil uil-search"></i>
+                <input type="text" placeholder="Buscar">
+            </div>
+            
+            <img src="assets/img/foto1.jpg" alt="">
+        </div>
+
+        <div class="dash-content">
+            <div class="overview">
+                <div>
+                    <div class="text">
+                        <span class="text"><h2>Buscar almacen</h2></span>
+                         <div class="text-search">
+
+                            <div class="space">   
+                                <span class="text"><h3> ELIGE UN CAMPO </h3> </span>
+                                <form id="form" action="post" class="form">
+                                    <select class="list" name="select1" id="">
+                                        <option  value="disabled selected">Elige un campo</option>
+                                        <option value="ejemplo2">Distrito</option>
+                                        <option value="ejemplo3">Estado</option>
+                                        <option value="ejemplo4">Nombre de la empresa</option>
+                                        <option value="ejemplo5">Nombre del comprador</option>
+                                        <option value="ejemplo5">Procedencia</option>
+                                        <option value="ejemplo5">Producto</option>
+                                    </select>
+                                </form>
+                            </div> 
+                            
+                            <div>
+                                <span class="text"> <h3>FILTRAR </h3>
+                                    <div class="search-box2">
+                                        <input type="text" placeholder="Buscar...">
+                                    </div>
+                                </span>
+                            </div>   
+                            <div class="right-button">
+                                <a href="#" class="button-search">
+                                    Consultar
+                                </a> 
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="tabla-container">
+                
+                <span class="text"><h2>Lista de Entregas de Almacen</h2></span>
+                
+                    <table class="tabla__content">
+                        <thead >
+                            <tr >
+                                <th class="separacion">
+                                    N°
+                                </th>
+                                <th class="separacion">
+                                    Empresa	
+                                </th>
+                                <th class="separacion">
+                                    Comprador
+                                </th>
+                                <th class="separacion">
+                                    Distrito
+                                </th>
+                                <th class="separacion">
+                                    Teléfono
+                                </th>
+                                <th class="separacion">
+                                    Vendedor
+                                </th>
+                                <th class="separacion">
+                                    Cantidad
+                                </th>
+
+                                <th class="separacion">
+                                    Producto
+                                </th>
+
+                                <th class="separacion">
+                                    Fecha de Entrega
+                                </th>
+                                <th class="separacion">
+                                    Observación
+                                </th>
+                                <th class="separacion">
+                                    Procedencia
+                                </th>
+                                <th class="separacion">
+                                    Preparación
+                                </th>
+                                <th class="separacion">
+                                    Preparado
+                                </th>
+                            </tr>
+
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td data-label=" N°">
+                                    1
+                                </td>
+                                <td data-label="Empresa">
+                                    Corporación gcym sac
+                                </td >
+                                <td data-label="Producto">
+                                    Ropa
+                                </td>
+                                <td data-label="Cantidad">
+                                    1
+                                </td>
+                                <td data-label="Teléfono">
+                                    930 725 321
+                                </td>
+                                <td data-label="Monto total">
+                                    s/.15.00
+                                </td>
+                                <td data-label="Metodo de pago">
+                                    no tiene
+                                </td>
+                                <td data-label="Modo de entrega">
+                                    contra entrega
+                                </td>
+                                <td data-label="Fecha de entrega">
+                                    27-04-2023
+                                </td>
+                                <td data-label="Metodo de pago">
+                                    no tiene
+                                </td>
+                                <td data-label="Modo de entrega">
+                                    contra entrega
+                                </td>
+                                <td data-label="Estado">
+                                    pendiente
+                                </td>
+                                <td data-label="Opciones" class="td-button">
+                                    <a href="#" class="button-index-green">
+                                        Editar 
+                                    </a> 
+                                    <a href="#" class="button-index-red">
+                                        Eliminar 
+                                    </a> 
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td data-label=" N°">
+                                    2
+                                </td>
+                                <td data-label="Empresa">
+                                    Corporación gcym sac
+                                </td >
+                                <td data-label="Producto">
+                                    Ropa
+                                </td>
+                                <td data-label="Cantidad">
+                                    1
+                                </td>
+                                <td data-label="Teléfono">
+                                    930 725 321
+                                </td>
+                                <td data-label="Monto total">
+                                    s/.15.00
+                                </td>
+                                <td data-label="Metodo de pago">
+                                    no tiene
+                                </td>
+                                <td data-label="Modo de entrega">
+                                    contra entrega
+                                </td>
+                                <td data-label="Fecha de entrega">
+                                    27-04-2023
+                                </td>
+                                <td data-label="Metodo de pago">
+                                    no tiene
+                                </td>
+                                <td data-label="Modo de entrega">
+                                    contra entrega
+                                </td>
+                                <td data-label="Estado">
+                                    pendiente
+                                </td>
+                                <td data-label="Opciones" class="td-button">
+                                    <a href="#" class="button-index-green">
+                                        Editar 
+                                    </a> 
+                                    <a href="#" class="button-index-red">
+                                        Eliminar 
+                                    </a> 
+                                </td>
+                            </tr>
+                            <tr>
+                                <td data-label=" N°">
+                                    3
+                                </td>
+                                <td data-label="Empresa">
+                                    Corporación gcym sac
+                                </td >
+                                <td data-label="Producto">
+                                    Ropa
+                                </td>
+                                <td data-label="Cantidad">
+                                    1
+                                </td>
+                                <td data-label="Teléfono">
+                                    930 725 321
+                                </td>
+                                <td data-label="Monto total">
+                                    s/.15.00
+                                </td>
+                                <td data-label="Metodo de pago">
+                                    no tiene
+                                </td>
+                                <td data-label="Modo de entrega">
+                                    contra entrega
+                                </td>
+                                <td data-label="Fecha de entrega">
+                                    27-04-2023
+                                </td>
+                                <td data-label="Metodo de pago">
+                                    no tiene
+                                </td>
+                                <td data-label="Modo de entrega">
+                                    contra entrega
+                                </td>
+                                <td data-label="Estado">
+                                    pendiente
+                                </td>
+                                <td data-label="Opciones" class="td-button">
+                                    <a href="#" class="button-index-green">
+                                        Editar 
+                                    </a> 
+                                    <a href="#" class="button-index-red">
+                                        Eliminar 
+                                    </a> 
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td data-label=" N°">
+                                    4
+                                </td>
+                                <td data-label="Empresa">
+                                    Corporación gcym sac
+                                </td >
+                                <td data-label="Producto">
+                                    Ropa
+                                </td>
+                                <td data-label="Cantidad">
+                                    1
+                                </td>
+                                <td data-label="Teléfono">
+                                    930 725 321
+                                </td>
+                                <td data-label="Monto total">
+                                    s/.15.00
+                                </td>
+                                <td data-label="Metodo de pago">
+                                    no tiene
+                                </td>
+                                <td data-label="Modo de entrega">
+                                    contra entrega
+                                </td>
+                                <td data-label="Fecha de entrega">
+                                    27-04-2023
+                                </td>
+                                <td data-label="Metodo de pago">
+                                    no tiene
+                                </td>
+                                <td data-label="Modo de entrega">
+                                    contra entrega
+                                </td>
+                                <td data-label="Estado">
+                                    pendiente
+                                </td>
+                                <td data-label="Opciones" class="td-button">
+                                    <a href="#" class="button-index-green">
+                                        Editar 
+                                    </a> 
+                                    <a href="#" class="button-index-red">
+                                        Eliminar 
+                                    </a> 
+                                </td>
+                                
+                            </tr>
+
+                            <tr>
+                                <td data-label=" N°">
+                                    5
+                                </td>
+                                <td data-label="Empresa">
+                                    Corporación gcym sac
+                                </td >
+                                <td data-label="Producto">
+                                    Ropa
+                                </td>
+                                <td data-label="Cantidad">
+                                    1
+                                </td>
+                                <td data-label="Teléfono">
+                                    930 725 321
+                                </td>
+                                <td data-label="Monto total">
+                                    s/.15.00
+                                </td>
+                                <td data-label="Metodo de pago">
+                                    no tiene
+                                </td>
+                                <td data-label="Modo de entrega">
+                                    contra entrega
+                                </td>
+                                <td data-label="Fecha de entrega">
+                                    27-04-2023
+                                </td>
+                                <td data-label="Metodo de pago">
+                                    no tiene
+                                </td>
+                                <td data-label="Modo de entrega">
+                                    contra entrega
+                                </td>
+                                <td data-label="Estado">
+                                    pendiente
+                                </td>
+                                <td data-label="Opciones" class="td-button">
+                                    <a href="#" class="button-index-green">
+                                        Editar 
+                                    </a> 
+                                    <a href="#" class="button-index-red">
+                                        Eliminar 
+                                    </a> 
+                                </td>
+                                
+                            </tr>
+
+                            <tr>
+                                <td data-label=" N°">
+                                    6
+                                </td>
+                                <td data-label="Empresa">
+                                    Corporación gcym sac
+                                </td >
+                                <td data-label="Producto">
+                                    Ropa
+                                </td>
+                                <td data-label="Cantidad">
+                                    1
+                                </td>
+                                <td data-label="Teléfono">
+                                    930 725 321
+                                </td>
+                                <td data-label="Monto total">
+                                    s/.15.00
+                                </td>
+                                <td data-label="Metodo de pago">
+                                    no tiene
+                                </td>
+                                <td data-label="Modo de entrega">
+                                    contra entrega
+                                </td>
+                                <td data-label="Fecha de entrega">
+                                    27-04-2023
+                                </td>
+                                <td data-label="Estado">
+                                    pendiente
+                                </td>
+                                <td data-label="Estado">
+                                    pendiente
+                                </td>
+                                <td data-label="Estado">
+                                    pendiente
+                                </td>
+                                <td data-label="Opciones" class="td-button">
+                                    <a href="#" class="button-index-green">
+                                        Editar 
+                                    </a> 
+                                    <a href="#" class="button-index-red">
+                                        Eliminar 
+                                    </a>  
+                                </td>
+                                
+                            </tr>
+
+                            <tr>
+                                <td data-label=" N°">
+                                    7
+                                </td>
+                                <td data-label="Empresa">
+                                    Corporación gcym sac
+                                </td >
+                                <td data-label="Producto">
+                                    Ropa
+                                </td>
+                                <td data-label="Cantidad">
+                                    1
+                                </td>
+                                <td data-label="Teléfono">
+                                    930 725 321
+                                </td>
+                                <td data-label="Monto total">
+                                    s/.15.00
+                                </td>
+                                <td data-label="Metodo de pago">
+                                    no tiene
+                                </td>
+                                <td data-label="Modo de entrega">
+                                    contra entrega
+                                </td>
+                                <td data-label="Fecha de entrega">
+                                    27-04-2023
+                                </td>
+                                <td data-label="Estado">
+                                    pendiente
+                                </td>
+                                <td data-label="Estado">
+                                    pendiente
+                                </td>
+                                <td data-label="Estado">
+                                    pendiente
+                                </td>
+                                <td data-label="Opciones" class="td-button">                                  
+                                    <a href="#" class="button-index-green">
+                                        Editar 
+                                    </a> 
+                                    <a href="#" class="button-index-red">
+                                        Eliminar 
+                                    </a> 
+                                </td>
+                                
+                            </tr>
+                        </tbody>
+                    </table>
+            </div>
+        </div>
+    </section>
+
+    <script src="assets/js/index.js"></script>
+</body>
+</html>
