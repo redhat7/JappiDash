@@ -452,13 +452,13 @@ nav.close ~ .dashboard .top{
 section .date,
 div form{
     display: inline-block;
-    margin-top: 1rem;
+    /* margin-top: 1rem; */
     height: 40px;
     min-width: 120px;
     
   }
 div form{
-    padding-top: 1.2rem;
+    /* padding-top: 8px; */
 }
 section .date{
     margin-right: 2rem;
@@ -495,6 +495,7 @@ div form .list{
     font-size: 13px;
     font-weight: 400;
     outline: none;
+    text-align: left;
     }
 
 ::-webkit-calendar-picker-indicator{
@@ -517,8 +518,7 @@ section .text-search{
   background: var(--color-withe);
   border-radius: 12px;
   box-shadow: var(--box-shadow);
-  padding: 0 1rem 1rem 1rem;
-  margin-top: 2rem;  
+  padding: 16px;
   transition:all 300ms ease;
 }
 .overview:hover{
@@ -609,7 +609,7 @@ section .text-search{
 section .tabla-container { 
   display: grid;
   grid-template-columns: 100%;
-  margin-top: 2rem;
+  margin-top: 1rem;
   background-color: var(--color-withe);
   padding: 0 1rem 1rem 1rem;
   box-shadow: var(--box-shadow);
@@ -620,10 +620,10 @@ section .tabla-container {
 
 section .tabla-container h2,
 .overview h2{
-  margin: 2rem 0 1rem 0;
+  margin: 1rem 0 1rem 0;
 }
 .overview h2{
-    padding-top: 2rem;
+    padding-top: 1rem;
 }
   
 section .tabla-container table{
@@ -802,6 +802,92 @@ section table tbody td{
     height: 10px;
     transition: all .25s ease;
   }
+
+  .iconfix{
+      max-width: 32px;
+  }
+
+  .estadoalmacen {
+    color: #F5A623;
+    font-weight: 700;
+  }
+
+  .estadoenruta {
+    color: #4A90E2;
+    font-weight: 700;
+  }
+
+  .estadoentregado{
+    color: #3CBEA9;
+    font-weight: 700;
+  }
+
+  .test {
+    display: flex;
+    align-items: center;
+    /* background-color: red; */
+
+    >img{
+      width: 80px;
+    }
+  }
+
+  .test2 {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 12px;
+    padding: 8px 0;
+  }
+
+  .test3 {
+    background-color: #f6f6f9;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    padding: 8px;
+    align-items: center;
+    display: flex;
+    text-align: center;
+  }
+
+  .test5{
+    display: flex;
+    height: auto;
+  }
+  
+  .test6{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .buttonfix {
+    display: flex;
+    font-weight: 500;
+    color: white;
+    border-radius: 8px;
+    padding: 8px 18px;
+    border: 1px solid var(--border-color);
+    background-color: #3CBEA9;
+    margin: auto 0 0 0;
+    cursor: pointer;
+  }
+
+  .buttonfix:hover {
+    background-color: black;
+    }
+
+  .test7{
+    background-color: #f6f6f9;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    padding: 8px;
+    align-items: center;
+    display: flex;
+    text-align: center;
+    padding-top: 8px;
+    min-width: 270px;
+    text-align: left;
+  }
   
   /*----- ICONO ROTADO PARA TITULO DEL MODAL -----*/
 
@@ -812,7 +898,6 @@ section table tbody td{
   .accordion-open .accordion__title {
     font-weight: 500;
   }
- 
 
 @media screen and (max-width:1280px){
     section .text-search{
